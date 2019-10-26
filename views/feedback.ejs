@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="UTF-8">
+  <title>Soccer News</title>
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/feedback.css">
+</head>
+
+<body>
+  <% include partials/header.ejs %>
+  <% include partials/user-navigation.ejs %>
+  <main>
+
+      <h1>Give Your Feedback</h1><br>
+      <div>
+      <img src= "<%= up.Item.imageUrl %>" alt="news" style="width:500px;height:300px;">
+      <div class = side>
+        <h2><%= up.Item.itemName %></h2>
+        <h3 style = "color: red"><%= up.Item.catalogCategory  %></h3>
+        <form action= '/myitems'>
+          <b style="font-size:20px; font-weight:bold; font-style:italic;">Rating:</b>
+          <span class= option>
+          <input type = 'hidden' name ='action' value='update'>
+          <input type='hidden' name='itemCode' value='<%= up.Item.itemCode %>' >
+          <select name="Rate">
+            <% for(let i=1; i< 6;i++){%>
+            <%if(i==up.Rating){ %>
+            <option value="<%=i%>" selected><%=i%></option>
+            <%}else{ %>
+            <option value="<%=i%>"><%=i%></option>
+            <%} %>
+            <%}%>
+          </select>
+        </span>
+        <span class= option>
+        <select name="made">
+          <%if (up.MadeIt == 'True'){%>
+          <option value="True" selected>Made it</option>
+          <option value="False">Others</option>
+          <% }else { %>
+          <option value="True" >Made it</option>
+          <option value="False" selected>Others</option>
+          <% }%>
+      </span>
+
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+
+
+
+  </main>
+  <% include partials/sidenav.ejs %>
+  <% include partials/footer.ejs %>
+
+</body>
+</html>

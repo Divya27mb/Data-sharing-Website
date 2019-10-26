@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Soccer News</title>
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/about.css">
+  </head>
+
+  <body>
+    <% include partials/header.ejs %>
+    <% include partials/user-navigation.ejs %>
+    <main>
+        <h1>Welcome to Soccer News!</h1>
+        <h3>Please Sign in!</h3>
+         <form action = '/sign_in'method= 'Post'>User name:<br>
+          <input type="text" name="username"><br>
+         Password:<br>
+          <input type="password" name="psw"><br><br>
+          <input type="submit" value="Log In">
+        </form>
+        <%}else{%>
+          <h1>Username or Password is wrong.</h1>
+          <h3>Try to sign in again!</h3>
+          <form action = '/sign_in'method= 'Post'>User name:<br>
+           <input type="text" name="username"><br>
+          Password:<br>
+           <input type="password" name="psw"><br><br>
+           <input type="submit" value="Log In">
+         </form>
+          <%}%>
+    </main>
+    <% include partials/sidenav.ejs %>
+    <% include partials/footer.ejs %>
+
+  </body>
+  </html>

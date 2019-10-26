@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="UTF-8">
+  <title>Soccer News</title>
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/contact.css">
+</head>
+
+<body>
+  <% include partials/header.ejs %>
+  <% include partials/user-navigation.ejs %>
+  <main>
+  <div class = contact>
+    <h1>Contact Us</h1>
+  </div>
+  <div class = container>
+  <form action= #>
+  <label for="fullname">Full Name</label><br>
+  <input type="text" id="fullname" name="fullname"><br>
+  <label for="email">Email</label><br>
+  <input type="text" id="email" name="email"><br>
+  <label for="subject">Message</label><br>
+  <textarea id="subject" name="msg" style="height:150px"></textarea><br>
+
+  <input type="submit" value="Submit">
+  </form>
+  </div>
+
+
+  </main>
+  <% include partials/sidenav.ejs %>
+  <% include partials/footer.ejs %>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Soccer News</title>
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/about.css">
+  </head>
+
+  <body>
+    <% include partials/header.ejs %>
+    <% include partials/user-navigation.ejs %>
+    <main>
+      <%if(te == 1){ %>
+        <h1>Enter Numeric Value</h1>
+        <%}else{%>
+    <h1>Enter value in both Field</h1>
+    <%} %>
+    </main>
+    <% include partials/sidenav.ejs %>
+    <% include partials/footer.ejs %>

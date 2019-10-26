@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+.banner {
+  background-color: #000066;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 15px;
+}
+.sign{
+  font-size:10px;
+  float: right;
+  color: white;
+}
+body {
+
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+}
+
+nav {
+  background-color: #336699;
+  padding: 5px;
+  margin-top: 1px;
+}
+li a {
+  color:#ff9900 ;
+}
+
+.tab {
+  display: inline;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 20px;
+  font-variant: small-caps;
+  font-weight: bold;
+
+}
+
+main {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  float: right;
+  width: 80%;
+  height: 510px;
+  margin-left: auto;
+  margin-right: 20px;
+  background-color:#c0c0c0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  overflow-y :auto;
+  overflow-x:hidden;
+  position: relative;
+
+}
+.side{
+  position : absolute;
+  left: 520px;
+  right: 10px;
+  top: 20px;
+  background-color: white;
+  padding : 5px 10px;
+
+}
+form{
+  padding-bottom: 5px;
+  padding-right: 5px;
+  float: left;
+
+}
+input[type=submit] {
+  width: 120px;
+  height: 60px;
+  background-color:#000066 ;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checked {
+  color: orange;
+}
+
+.low{
+  position : absolute;
+  left: 10px;
+  right:10px;
+  top: 310px;
+  color: red;
+  background-color: white;
+  margin-top: 5px;
+  padding : 5px 10px;
+}
+aside {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #336699;
+  width: 15%;
+  float: left;
+  padding: 20px;
+  color : #ff0000 ;
+  height: 480px;
+
+}
+.fo {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 15px;
+  font-variant: small-caps;
+  font-weight: bold;
+  list-style-type:none;
+
+}
+
+footer {
+  clear: both;
+  background-color: #000066;
+  color: white;
+  padding: 5px 20px;
+  text-align : right;
+}

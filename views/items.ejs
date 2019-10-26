@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="UTF-8">
+  <title>Soccer News</title>
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/items.css">
+  <link rel= "stylesheet" type="text/css"  href='/assets/font-awesome-4.7.0/css/font-awesome.min.css' >
+</head>
+
+<body>
+  <% include partials/header.ejs %>
+  <% include partials/user-navigation.ejs %>
+
+  <main>
+    <img src= "<%= data.imageUrl %>" alt="news" style="width:500px;height:300px;">
+    <div class = side>
+      <h2><%= data.itemName %></h2>
+      <h3 style = "color: red"><%= data.catalogCategory %></h3><br>
+      <!-- <h3>Star Rating: <%= data.rating%></h3> -->
+      <br>
+      <br>
+      <be>
+      <form action="/myitems">
+        <input type='hidden' name='itemCode' value='<%= data.itemCode %>'>
+        <input type='hidden' name='action' value='save'>
+          <input type="submit" value="Save"/>
+        </form>
+        <form action="/feedback">
+          <input type='hidden' name='itemCode' value='<%= data.itemCode %>'>
+          <input type="submit" value="Rate"/>
+        </form>
+        <form action="/categories/catalog">
+          <input type="submit" value="Back"/>
+        </form><br><br><br><br><br>
+    </div>
+    <div class= low>
+      <p><%= data.description %></p>
+
+    </div>
+  </main>
+  <% include partials/sidenav.ejs %>
+  <% include partials/footer.ejs %>
+<script type= 'text/javascript' src = '/assets/js/script.js'></script>
+</body>
+</html>

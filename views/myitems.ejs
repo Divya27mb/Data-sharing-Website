@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="UTF-8">
+  <title>Soccer News</title>
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/myitems.css">
+</head>
+
+<body>
+  <% include partials/header.ejs %>
+  <% include partials/user-navigation.ejs %>
+  <main>
+    <h2 style = "text-align: center;">Saved News</h2>
+    <article>
+      <h4> <a href='/myitems'>Click Here</a> to post new new</h4>
+      <h4> All news posted by you has &#9989; sign </h4>
+    </article>
+    <% for(i=0;i < up.length; i++) { %>
+    <div class = art><img src= "<%= up[i].Item.imageUrl %>" alt="news" style="width:200px;height:150px;">
+      <p class = txt><b><%= up[i].Item.itemName %> <% if (up[i].MadeIt == 'True'){ %>&#9989; </b></br> <% }else{%> </b></br><% }%>
+      Rating : <%= up[i].Rating %></p>
+
+      <div class = rig>
+
+          <form action="/feedback">
+          <input type='hidden' name='action' value='update' >
+          <input type='hidden' name='itemCode' value='<%= up[i].Item.itemCode %>' >
+          <input type="submit" value="Update"/>
+      </form>
+        <form action="/myitems">
+          <input type='hidden' name='action' value='delete' >
+          <input type='hidden' name='itemCode' value='<%= up[i].Item.itemCode %>' >
+          <input type="submit" value="Delete"/></form></div>
+      </div>
+      <% } %>
+      <!-- <div class = art><img src= "/assets/images/2.jpg" alt="news" style="width:200px;height:150px;">
+        <p class = txt><b>Solskjaer backs Pogba for Man United captaincy </b></p>
+        <div class = rig><form action="/categories/item/2"><input type="submit" value="Update"/></form>
+          <form action="/myitems"><input type="submit" value="Delete"/></form></div>
+        </div>
+        <div class = art><img src= "/assets/images/4.jpg" alt="news" style="width:200px;height:150px;">
+          <p class = txt><b>Kagawa joins Besiktas on loan &#9989;</b></p>
+          <div class = rig><form action="/categories/item/4"><input type="submit" value="Update"/></form>
+            <form action="/myitems"><input type="submit" value="Delete"/></form></div>
+          </div> -->
+
+          </main>
+          <% include partials/sidenav.ejs %>
+          <% include partials/footer.ejs %>
+
+      </body>
+    </html>
